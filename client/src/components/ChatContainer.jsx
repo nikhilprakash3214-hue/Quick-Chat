@@ -115,7 +115,7 @@ const ChatContainer = () => {
                                             className="max-w-full rounded-lg mb-2 block border border-white/10" 
                                         />
                                     )}
-                                    {message.text && <p className="text-sm break-words whitespace-pre-wrap">{message.text}</p>}
+                                    {message.text && <p className="text-sm wrap-break-words whitespace-pre-wrap">{message.text}</p>}
                                 </div>
                             </div>
                         </div>
