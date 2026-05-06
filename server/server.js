@@ -44,7 +44,12 @@ socket.on ("disconnect", () => {
 
 //middleware 
 app.use(express.json({ limit: "4mb" }));
-    app.use(cors());
+app.use(cors({
+  // Replace this with your actual frontend Vercel URL
+  origin: "https://quick-chat-eta-self.vercel.app",
+  credentials: true, // Required if you're sending cookies or authorization headers
+  methods: ["GET", "POST", "PUT", "DELETE"],
+}));
 
 // Routes setup
 app.use("/api/status", (req, res) => res.send("Server is live")); 
